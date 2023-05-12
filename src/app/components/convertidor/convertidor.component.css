@@ -1,0 +1,51 @@
+.fondo{
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+    padding: 3rem;
+    margin-top: 3rem;
+   /*  background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.9)),rgb(101, 108, 248); */
+    opacity: 1;
+    background-color:rgb(140, 142, 176);
+   /*  background-image: url('/assets/fondo.jpg');
+    background-position: center;
+    background-size: cover; */
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+input, select{
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    justify-content: center;
+
+}
+.grilla-principal{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    margin: 1rem;
+}
+
+.filas{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 1rem;
+}
+main{
+    margin: 1rem;
+}
+
+.dinero{
+    background-color: rgb(4, 158, 27);
+    padding: 0.5rem;
+}
+
+.etiqueta{
+    background-color: rgb(0, 0, 0);
+    padding: 0.5rem;
+}
+.separacion{
+    margin-top: 1rem;
+}

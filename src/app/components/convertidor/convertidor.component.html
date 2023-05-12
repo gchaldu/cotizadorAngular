@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="fondo">
+      <main>
+        <h1>Convertidor de Moneda</h1>
+      </main>
+      <div>
+        <section>
+            <div class="filas">
+                <h2>Seleccione</h2>
+                <div>
+                    <label for="dinero">Ingresar el monto de calculo (Dinero) </label>
+                    <input type="text" placeholder="Ingresar monto" 
+                        [(ngModel)]="monto"
+                        (input)="convertir()"
+                    />
+                    <br>
+                </div>
+            </div>
+            <div class="grilla-principal">
+                <div>
+                    <label for="dolar">Convertir Moneda: </label>
+                    <select name="monedaOrigen" [(ngModel)]="tengo" (change)="convertir()">
+                    <option name="monedaOrigen"> Seleccione </option>
+                    <option
+                        name="monedaOrigen"
+                        *ngFor="let moneda of monedaOrigen"
+                        value="{{ moneda }}"
+                        id="monedaOrigen"
+                    >
+                        {{ moneda }}
+                    </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="dolar">Convertir a: </label>
+                    <select name="monedaDestino" [(ngModel)]="quiero" (change)="convertir()">
+                    <option name="monedaDestino"> Seleccione </option>
+                    <option
+                        name="monedaDestino"
+                        *ngFor="let moneda of monedaOrigen"
+                        value="{{ moneda }}"
+                        id="monedaDestino"
+                    >
+                        {{ moneda }}
+                    </option>
+                    </select>
+                </div>
+                <div class="separacion">
+                    <label for=""><span class="dinero">{{monto | currency}}</span> 
+                        <span class="etiqueta">{{tengo}}</span>
+                    </label>
+                </div>
+                <div class="separacion">
+                    <label class="etiqueta">
+                    <span class="etiqueta">SON </span>
+                    <span class="dinero">{{total | currency }}</span>
+                    <span class="etiqueta">{{quiero}}</span>
+                </label>
+                </div>
+            </div>
+        </section>
+    </div>
+  </body>
+</html>
